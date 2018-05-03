@@ -1,6 +1,10 @@
 package generics;//: generics/LinkedStack.java
 // A stack implemented with an internal linked structure.
 
+/**
+ * 末端哨兵  判断堆栈何时为空
+ * @param <T>
+ */
 public class LinkedStack<T> {
   private static class Node<U> {
     U item;

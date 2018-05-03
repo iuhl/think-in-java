@@ -2,6 +2,9 @@ package typeinfo;//: typeinfo/Person.java
 // A class with a Null Object.
 import net.mindview.util.*;
 
+/**
+ * 创建空对象代替null 防止有可能发生的空指针异常
+ */
 class Person {
   public final String first;
   public final String last;
@@ -15,8 +18,7 @@ class Person {
   public String toString() {
     return "Person: " + first + " " + last + " " + address;
   }
-  public static class NullPerson
-  extends Person implements Null {
+  public static class NullPerson extends Person implements Null {
     private NullPerson() { super("None", "None", "None"); }
     public String toString() { return "NullPerson"; }
   }
